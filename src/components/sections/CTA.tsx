@@ -31,9 +31,9 @@ const CTA = () => {
     <section className="py-20 relative" ref={sectionRef}>
       {/* Background with overlay */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-steel-dark/80 z-10"></div>
+        <div className="absolute inset-0 bg-steel-DEFAULT/90 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070" 
+          src="https://images.unsplash.com/photo-1600081728723-c8aa2ee3236a?q=80&w=2070" 
           alt="Metal workshop" 
           className="w-full h-full object-cover"
         />
@@ -52,7 +52,7 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
               href="tel:+4912345678900" 
-              className="bg-steel-DEFAULT hover:bg-steel-light text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-steel-dark hover:bg-steel-DEFAULT text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <PhoneCall className="mr-2 h-5 w-5" />
               +49 (0) 123 456 789 00

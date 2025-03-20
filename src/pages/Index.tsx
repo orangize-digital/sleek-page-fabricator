@@ -13,6 +13,7 @@ import CTA from '@/components/sections/CTA';
 
 const Index = () => {
   useEffect(() => {
+    // Handle reveal animations on scroll
     const handleScroll = () => {
       const reveals = document.querySelectorAll('.reveal');
       

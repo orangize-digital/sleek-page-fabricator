@@ -84,7 +84,7 @@ const Process = () => {
               <div 
                 key={index} 
                 className={`flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 reveal relative ${
-                  index % 2 === 0 ? 'md:flex-row-reverse text-right' : 'text-left'
+                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
@@ -99,7 +99,7 @@ const Process = () => {
                 </div>
                 
                 {/* Step content (alternating sides on desktop) */}
-                <div className={`md:w-[calc(50%-40px)] ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} py-4`}>
+                <div className={`md:w-[calc(50%-40px)] text-center md:text-left py-4`}>
                   <h3 className="text-xl font-semibold mb-3 text-steel-dark">{step.title}</h3>
                   <p className="text-gray-700">{step.description}</p>
                 </div>

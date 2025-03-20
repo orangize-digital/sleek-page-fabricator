@@ -7,8 +7,27 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
+    // Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId) {
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            setIsOpen(false);
+          }
+        }
+      });
+    });
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -21,6 +40,21 @@ const Header = () => {
       } else {
         setShowScrollTop(false);
       }
+
+      // Determine active section
+      const sections = document.querySelectorAll('section[id]');
+      let currentSection = 'home';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id') || 'home';
+        }
+      });
+      
+      setActiveSection(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -56,12 +90,17 @@ const Header = () => {
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-steel-DEFAULT transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-steel-DEFAULT after:transition-all hover:after:w-full"
+                  className={cn(
+                    "text-sm font-medium px-3 py-2 rounded-md transition-colors duration-200 relative",
+                    activeSection === item.href.substring(1) 
+                      ? "bg-steel-DEFAULT/10 text-steel-DEFAULT" 
+                      : "text-foreground/80 hover:bg-steel-DEFAULT/10 hover:text-steel-DEFAULT"
+                  )}
                 >
                   {item.name}
                 </a>
@@ -98,7 +137,12 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-foreground hover:text-steel-DEFAULT transition-colors duration-200 border-b border-muted pb-2"
+                className={cn(
+                  "text-lg font-medium py-2 px-4 rounded-md transition-colors duration-200 border-b border-muted",
+                  activeSection === item.href.substring(1) 
+                    ? "bg-steel-DEFAULT/10 text-steel-DEFAULT" 
+                    : "text-foreground hover:bg-steel-DEFAULT/10 hover:text-steel-DEFAULT"
+                )}
               >
                 {item.name}
               </a>

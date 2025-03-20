@@ -38,6 +38,12 @@ const projects = [
     category: 'Sicherheitslösungen',
     image: 'https://images.unsplash.com/photo-1529422643029-d4585747aaf2?q=80&w=2070',
     description: 'Hochsichere Metalltür mit mehrfacher Verriegelung für einen gewerblichen Kunden.'
+  },
+  {
+    title: 'Metall-Einlegearbeit',
+    category: 'Anderes',
+    image: 'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=2009',
+    description: 'Kunstvolle Einlegearbeit aus verschiedenen Metallen für ein exklusives Designprojekt.'
   }
 ];
 
@@ -110,7 +116,7 @@ const Projects = () => {
               className={`px-6 py-2 rounded-full transition-all duration-300 ${
                 activeFilter === filter
                   ? 'bg-steel-DEFAULT text-white'
-                  : 'bg-white hover:bg-gray-100 text-gray-700'
+                  : 'bg-white hover:bg-steel-light/20 hover:text-steel-DEFAULT text-gray-700'
               }`}
             >
               {filter}
