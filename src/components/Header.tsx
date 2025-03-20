@@ -46,8 +46,10 @@ const Header = () => {
       let currentSection = 'home';
       
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
+        // Cast the Element to HTMLElement to access offsetTop and offsetHeight
+        const htmlSection = section as HTMLElement;
+        const sectionTop = htmlSection.offsetTop - 100;
+        const sectionHeight = htmlSection.offsetHeight;
         
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           currentSection = section.getAttribute('id') || 'home';
