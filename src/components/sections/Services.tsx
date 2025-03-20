@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Ruler, Lock, Minimize2, Geometry, Settings, Shield } from 'lucide-react';
+import { Ruler, Lock, Minimize2, PenTool, Settings, Shield } from 'lucide-react';
 
 const services = [
   {
@@ -19,7 +19,7 @@ const services = [
     description: 'Funktionale und stilvolle Treppen und Geländer aus verschiedenen Metallarten, passend zu Ihrer Architektur.'
   },
   {
-    icon: <Geometry className="w-10 h-10 text-steel-DEFAULT" />,
+    icon: <PenTool className="w-10 h-10 text-steel-DEFAULT" />,
     title: 'Metallgestaltung',
     description: 'Kunstvolle Metallobjekte und dekorative Elemente, die Ihre Räume und Außenbereiche aufwerten.'
   },
