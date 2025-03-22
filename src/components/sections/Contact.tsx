@@ -25,10 +25,10 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const formElement = e.target as HTMLFormElement;
-    const formData = new FormData(formElement);
-
+  
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+  
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
