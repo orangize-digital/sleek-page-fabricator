@@ -1,4 +1,4 @@
-const ThankYou = () => {
+const Danke = () => {
   return (
     <section className="section-padding text-center">
       <div className="container mx-auto px-4">
@@ -13,4 +13,4 @@ const ThankYou = () => {
   );
 };
 
-export default ThankYou;
+export default Danke;
