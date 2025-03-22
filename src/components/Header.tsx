@@ -1,25 +1,24 @@
-
-import React, { useState, useEffect } from 'react';
-import { ArrowUp, Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import React, { useState, useEffect } from "react";
+import { ArrowUp, Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     // Smooth scroll for all anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
+        const targetId = this.getAttribute("href");
         if (targetId) {
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
             targetElement.scrollIntoView({
-              behavior: 'smooth'
+              behavior: "smooth",
             });
             // Close mobile menu if open
             setIsOpen(false);
@@ -42,44 +41,47 @@ const Header = () => {
       }
 
       // Determine active section
-      const sections = document.querySelectorAll('section[id]');
-      let currentSection = 'home';
-      
-      sections.forEach(section => {
+      const sections = document.querySelectorAll("section[id]");
+      let currentSection = "home";
+
+      sections.forEach((section) => {
         // Cast the Element to HTMLElement to access offsetTop and offsetHeight
         const htmlSection = section as HTMLElement;
         const sectionTop = htmlSection.offsetTop - 100;
         const sectionHeight = htmlSection.offsetHeight;
-        
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentSection = section.getAttribute('id') || 'home';
+
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentSection = section.getAttribute("id") || "home";
         }
       });
-      
+
       setActiveSection(currentSection);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const navItems = [
-    { name: 'Startseite', href: '#home' },
-    { name: 'Über uns', href: '#about' },
-    { name: 'Leistungen', href: '#services' },
-    { name: 'Projekte', href: '#projects' },
-    { name: 'Prozess', href: '#process' },
-    { name: 'Referenzen', href: '#testimonials' },
-    { name: 'Kontakt', href: '#contact' },
+    { name: "Über uns", href: "#about" },
+    { name: "Leistungen", href: "#services" },
+    { name: "Materialwahl", href: "#materials" },
+    { name: "Projekte", href: "#projects" },
+    { name: "Prozess", href: "#process" },
+    { name: "Referenzen", href: "#testimonials" },
+    { name: "Kontakt", href: "#contact" },
   ];
 
   return (
     <>
-      <header 
+      <header
         className={cn(
           "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 py-4",
           scrolled ? "bg-white/80 backdrop-blur-md shadow-md" : "bg-transparent"
@@ -87,8 +89,14 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between">
-            <a href="#home" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-steel-dark">Metallbaumeister Albrecht</span>
+            <a
+              href="#home"
+              className={cn(
+                "flex items-center space-x-2 text-xl font-bold transition-colors duration-300",
+                scrolled ? "text-steel-dark" : "text-white"
+              )}
+            >
+              Metallbaumeister Albrecht
             </a>
 
             {/* Desktop Navigation */}
@@ -99,16 +107,20 @@ const Header = () => {
                   href={item.href}
                   className={cn(
                     "text-sm font-medium px-3 py-2 rounded-md transition-colors duration-200 relative",
-                    activeSection === item.href.substring(1) 
-                      ? "bg-steel-DEFAULT/10 text-steel-DEFAULT" 
-                      : "text-foreground/80 hover:bg-steel-DEFAULT/10 hover:text-steel-DEFAULT"
+                    scrolled
+                      ? activeSection === item.href.substring(1)
+                        ? "text-steel-dark font-semibold"
+                        : "text-steel-dark/80 hover:text-steel-dark"
+                      : activeSection === item.href.substring(1)
+                      ? "text-white font-semibold"
+                      : "text-white/80 hover:text-white"
                   )}
                 >
                   {item.name}
                 </a>
               ))}
             </nav>
-            
+
             {/* Mobile Navigation Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -141,8 +153,8 @@ const Header = () => {
                 onClick={() => setIsOpen(false)}
                 className={cn(
                   "text-lg font-medium py-2 px-4 rounded-md transition-colors duration-200 border-b border-muted",
-                  activeSection === item.href.substring(1) 
-                    ? "bg-steel-DEFAULT/10 text-steel-DEFAULT" 
+                  activeSection === item.href.substring(1)
+                    ? "bg-steel-DEFAULT/10 text-steel-DEFAULT"
                     : "text-foreground hover:bg-steel-DEFAULT/10 hover:text-steel-DEFAULT"
                 )}
               >
@@ -157,8 +169,10 @@ const Header = () => {
       <button
         onClick={scrollToTop}
         className={cn(
-          "fixed bottom-6 right-6 bg-steel-DEFAULT text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20",
-          showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+          "fixed bottom-6 right-6 bg-steel-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20",
+          showScrollTop
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10 pointer-events-none"
         )}
         aria-label="Scroll to top"
       >
