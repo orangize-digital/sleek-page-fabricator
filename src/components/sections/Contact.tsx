@@ -233,11 +233,13 @@ const Contact = () => {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action="/danke.html"
+                action="/"
                 className="space-y-6"
               >
                 {/* Netlify required hidden inputs */}
                 <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="redirect" value="/danke.html" />
+                <input type="hidden" name="success" value="/danke.html" />
                 <p className="hidden">
                   <label>
                     Nicht ausfüllen: <input name="bot-field" />
