@@ -233,7 +233,7 @@ const Contact = () => {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action="/"
+                action="/danke.html"
                 className="space-y-6"
               >
                 {/* Netlify required hidden inputs */}
