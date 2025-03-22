@@ -31,7 +31,8 @@ const Contact = () => {
 
     fetch("/", {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
         setIsSubmitting(false);
