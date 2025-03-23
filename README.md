@@ -1,18 +1,6 @@
-# Welcome to your Lovable project
-
 ## Project info
 
-**URL**: https://lovable.dev/projects/8a375e6c-4f4a-4daa-aa7c-d3d6744e3f7c
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/8a375e6c-4f4a-4daa-aa7c-d3d6744e3f7c) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+**URL**: https://robert-albrecht.netlify.app/
 
 **Use your preferred IDE**
 
@@ -59,11 +47,3 @@ This project is built with .
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8a375e6c-4f4a-4daa-aa7c-d3d6744e3f7c) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
