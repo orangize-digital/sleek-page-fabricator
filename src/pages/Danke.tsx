@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Danke = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.location.pathname === "/danke") {
+      navigate("/danke", { replace: true });
+    }
+  }, [navigate]);
+
   return (
     <section className="section-padding text-center">
       <div className="container mx-auto px-4">
