@@ -5,9 +5,10 @@ const Danke = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (window.location.pathname === "/danke") {
+    // Ensure React Router takes over immediately
+    setTimeout(() => {
       navigate("/danke", { replace: true });
-    }
+    }, 100);
   }, [navigate]);
 
   return (
