@@ -1,29 +1,46 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Send, MapPin, Phone, Mail, Clock } from "lucide-react";
+import React, { useEffect, useRef, memo } from "react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+
+const InfoRow = memo(
+  ({
+    icon,
+    title,
+    children,
+  }: {
+    icon: React.ReactNode;
+    title: string;
+    children: React.ReactNode;
+  }) => (
+    <div className="flex items-start">
+      <div className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center mr-4 flex-shrink-0">
+        {icon}
+      </div>
+      <div>
+        <h4 className="font-medium text-steel-dark mb-1">{title}</h4>
+        <div className="text-gray-700">{children}</div>
+      </div>
+    </div>
+  )
+);
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries) =>
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("active");
           }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
+        }),
+      { threshold: 0.1 }
     );
 
-    const revealElements = sectionRef.current?.querySelectorAll(".reveal");
-    revealElements?.forEach((el) => observer.observe(el));
+    const elements = sectionRef.current?.querySelectorAll(".reveal") ?? [];
+    elements.forEach((el) => observer.observe(el));
 
-    return () => {
-      revealElements?.forEach((el) => observer.unobserve(el));
-    };
+    return () => elements.forEach((el) => observer.unobserve(el));
   }, []);
 
   return (
@@ -42,267 +59,78 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="flex justify-center items-center">
           <div className="reveal">
             <div className="glass-panel p-8 h-full">
               <h3 className="text-2xl font-semibold mb-6 text-steel-dark">
                 Unsere Kontaktdaten
               </h3>
 
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-steel-dark" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-steel-dark mb-1">
-                      Adresse
-                    </h4>
-                    <p className="text-gray-700">
-                      Musterstraße 123, 12345 Musterstadt, Deutschland
-                    </p>
-                  </div>
-                </div>
+              <address className="not-italic space-y-6">
+                <InfoRow
+                  icon={<MapPin className="w-5 h-5 text-steel-dark" />}
+                  title="Adresse"
+                >
+                  Tannenweg 15, 31675 Bückeburg, Deutschland
+                </InfoRow>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <Phone className="w-5 h-5 text-steel-dark" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-steel-dark mb-1">
-                      Telefon
-                    </h4>
-                    <p className="text-gray-700">
-                      <a
-                        href="tel:+4912345678900"
-                        className="hover:text-steel-dark transition-colors"
-                      >
-                        +49 (0) 123 456 789 00
-                      </a>
-                    </p>
-                  </div>
-                </div>
+                <InfoRow
+                  icon={<Phone className="w-5 h-5 text-steel-dark" />}
+                  title="Telefon"
+                >
+                  <a
+                    href="tel:+491713310241"
+                    className="hover:text-steel-dark transition-colors"
+                  >
+                    +49 (0) 1713310241
+                  </a>
+                </InfoRow>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <Mail className="w-5 h-5 text-steel-dark" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-steel-dark mb-1">E-Mail</h4>
-                    <p className="text-gray-700">
-                      <a
-                        href="mailto:info@metallbaumeister-albrecht.de"
-                        className="hover:text-steel-dark transition-colors"
-                      >
-                        info@metallbaumeister-albrecht.de
-                      </a>
-                    </p>
-                  </div>
-                </div>
+                <InfoRow
+                  icon={<Mail className="w-5 h-5 text-steel-dark" />}
+                  title="E-Mail"
+                >
+                  <a
+                    href="mailto:info@metallbaumeister-albrecht.de"
+                    className="hover:text-steel-dark transition-colors"
+                  >
+                    info@metallbaumeister-albrecht.de
+                  </a>
+                </InfoRow>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <Clock className="w-5 h-5 text-steel-dark" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-steel-dark mb-1">
-                      Öffnungszeiten
-                    </h4>
-                    <div className="space-y-1 text-gray-700">
-                      <p>Montag - Freitag: 8:00 - 17:00 Uhr</p>
-                      <p>Samstag: Nach Vereinbarung</p>
-                      <p>Sonntag: Geschlossen</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <InfoRow
+                  icon={<Clock className="w-5 h-5 text-steel-dark" />}
+                  title="Öffnungszeiten"
+                >
+                  <p>Montag - Freitag: 8:00 - 17:00 Uhr</p>
+                  <p>Samstag: Nach Vereinbarung</p>
+                  <p>Sonntag: Geschlossen</p>
+                </InfoRow>
+              </address>
 
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h4 className="font-medium text-steel-dark mb-4">
-                  Folgen Sie uns
+                  Kontaktformular
                 </h4>
-                <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center hover:bg-steel-dark hover:text-white transition-colors duration-300"
-                    aria-label="Facebook"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-steel-light/10 flex items-center justify-center hover:bg-steel-dark hover:text-white transition-colors duration-300"
-                    aria-label="Instagram"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect
-                        x="2"
-                        y="2"
-                        width="20"
-                        height="20"
-                        rx="5"
-                        ry="5"
-                      ></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                  </a>
-                </div>
+                <a
+                  href="https://form.jotform.com/250872969429373"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-steel-dark hover:bg-steel-light text-white px-6 py-3 rounded-lg inline-block transition-colors duration-300"
+                  aria-label="Kontaktformular öffnen"
+                >
+                  Jetzt Nachricht senden
+                </a>
               </div>
             </div>
           </div>
-
-          <div className="glass-panel p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-steel-dark">
-              Senden Sie uns eine Nachricht
-            </h3>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              action="/danke.html?no-cache=1"
-              className="space-y-6"
-            >
-              {/* Netlify required hidden inputs */}
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>
-                  Nicht ausfüllen: <input name="bot-field" />
-                </label>
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                    placeholder="Ihr Name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    E-Mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                    placeholder="Ihre E-Mail"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Telefon
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                    placeholder="Ihre Telefonnummer"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Betreff *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                  >
-                    <option value="">Bitte auswählen</option>
-                    <option value="Anfrage">Anfrage</option>
-                    <option value="Beratung">Beratungstermin</option>
-                    <option value="Angebot">Angebot</option>
-                    <option value="Sonstiges">Sonstiges</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Nachricht *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                  placeholder="Ihre Nachricht an uns"
-                ></textarea>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  className="w-full px-8 py-3 bg-steel-dark hover:bg-steel-light text-white rounded-lg"
-                >
-                  Nachricht senden
-                </button>
-              </div>
-            </form>
-          </div>
         </div>
 
-        {/* Map or location image */}
+        {/* Map Section */}
         <div className="mt-16 reveal">
           <div className="rounded-lg overflow-hidden shadow-lg h-[400px] relative">
             <img
-              src="https://images.unsplash.com/photo-1577128786741-3bad97927271?q=80&w=2070"
+              src="/Tannen-Weg-14.png"
               alt="Standort Metallbaumeister Albrecht"
               className="w-full h-full object-cover"
             />
@@ -312,14 +140,14 @@ const Contact = () => {
                   Besuchen Sie uns
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  Wir freuen uns auf Ihren Besuch in unserer Werkstatt und
-                  unserem Showroom.
+                  Wir freuen uns auf Ihren Besuch in unserer Werkstatt.
                 </p>
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/place/Tannenweg+15,+31675+B%C3%BCckeburg/@52.2906604,8.9985336,16z/data=!3m1!4b1!4m6!3m5!1s0x47ba773f2eaa8255:0xc49e643313db964f!8m2!3d52.2906571!4d9.0011085!16s%2Fg%2F11cpdqdcgl?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-steel-dark hover:bg-steel-light text-white px-4 py-2 rounded-lg inline-flex items-center justify-center transition-colors duration-300"
+                  aria-label="Route zu unserem Standort berechnen"
                 >
                   Route berechnen
                   <MapPin className="ml-2 h-4 w-4" />

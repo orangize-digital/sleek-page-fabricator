@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-steel-dark/70 z-10"></div>
         <img
-          src="/hero-img.jpg"
+          src="public/Geländer/Screenshot 2024-05-17 124618.png"
           alt="Metal Welding"
           className="w-full h-full object-cover object-center"
         />
@@ -41,7 +41,10 @@ const Hero = () => {
               className="bg-steel-dark hover:bg-steel-light text-white px-8 py-7 rounded-lg font-medium text-base transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               asChild
             >
-              <a href="#contact">
+              <a
+                href="https://form.jotform.com/250872969429373"
+                target="_blank"
+              >
                 Kontakt aufnehmen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>

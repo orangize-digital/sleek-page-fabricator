@@ -109,7 +109,7 @@ const Services = () => {
 
         <div className="mt-16 text-center reveal">
           <a
-            href="#contact"
+            href="https://form.jotform.com/250872969429373"
             className="inline-flex items-center justify-center px-8 py-3 bg-steel-dark hover:bg-steel-light text-white rounded-lg transition-colors duration-300 font-medium shadow-lg"
           >
             Anfrage stellen

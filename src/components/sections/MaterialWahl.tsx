@@ -5,32 +5,28 @@ const materials = [
     title: "Edelstahl",
     description: "Hochwertige Verarbeitung für langlebige Lösungen",
     icon: Shield,
-    image:
-      "https://images.unsplash.com/photo-1535813547-3e2f90a94d3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/edelstahl/Rankgitter Edelstahl 1.jpg",
     features: ["Korrosionsbeständig", "Langlebig", "Pflegeleicht"],
   },
   {
     title: "Aluminium",
     description: "Leichte und flexible Konstruktionen",
     icon: Wrench,
-    image:
-      "https://images.unsplash.com/photo-1563137724-7e80f5c8d8e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/aluminium-schweissen/Screenshot 2024-05-17 124859.png",
     features: ["Leichtgewichtig", "Vielseitig", "Wetterfest"],
   },
   {
     title: "Stahl",
     description: "Robuste und belastbare Strukturen",
     icon: Ruler,
-    image:
-      "https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/Sichtschutz Stahl/Screenshot 2024-05-17 124658.png",
     features: ["Hochbelastbar", "Formstabil", "Kosteneffizient"],
   },
   {
-    title: "Spezialmaterialien",
+    title: "Blecharbeiten",
     description: "Innovative Lösungen für besondere Anforderungen",
     icon: Sparkles,
-    image:
-      "https://images.unsplash.com/photo-1533062618053-d51e617307ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "Blecharbeiten/Abkantung Wetterblech.png",
     features: ["Individuell", "Innovativ", "Nachhaltig"],
   },
 ];
@@ -38,7 +34,7 @@ const materials = [
 const MaterialWahl = () => {
   return (
     <section className="section-padding bg-white" id="materials">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl text-center md:text-4xl font-bold mb-6 text-steel-dark">
           Materialwahl & Kosteneffizienz
         </h2>

@@ -5,58 +5,78 @@ const projects = [
   {
     title: "Designtreppe im Industrieloft",
     category: "Treppen",
-    image:
-      "https://images.unsplash.com/photo-1607750262089-1684de9e2cb0?q=80&w=2070",
-    description:
-      "Freitragende Designtreppe aus Stahl und Glas für ein modernes Loft in Hamburg.",
+    image: "/Treppe+Geländer/20241216_143724.jpg",
+    description: "Freitragende Designtreppe aus Stahl für ein modernes Loft.",
   },
   {
     title: "Schmiedeeisernes Einfahrtstor",
     category: "Tore",
-    image:
-      "https://images.unsplash.com/photo-1518618750560-8f07abde4e4e?q=80&w=2070",
+    image: "/Hoftor/Hoftor Einfahrt Stahl Feuerverzinkt.jpg",
     description:
-      "Handgeschmiedetes Einfahrtstor mit aufwendigen Verzierungen für eine historische Villa.",
+      "Handgeschmiedetes Einfahrtstor mit aufwendigen Verzierungen für eine familien haus.",
   },
   {
-    title: "Industrielle Stahlkonstruktion",
-    category: "Konstruktionen",
-    image:
-      "https://images.unsplash.com/photo-1544378382-5e394b6399ed?q=80&w=2070",
+    title: "Robuster Edelstahl-Auflaufpfosten",
+    category: "Edelstahl",
+    image: "/edelstahl/Auflaufpfosten Edelstahl.png",
     description:
-      "Tragende Stahlkonstruktion für eine Lagerhalle mit besonderen statischen Anforderungen.",
+      "Hochwertiger Edelstahl-Auflaufpfosten für sichere Führung und Schutz. Witterungsbeständig und langlebig für den Einsatz in verschiedenen Bereichen.",
+  },
+  {
+    title: "Edelstahl-Briefkastenhalter für Stabilität und Design",
+    category: "Edelstahl",
+    image: "/edelstahl/Briefkastenhalter Edelstahl.png",
+    description:
+      "Eleganter und stabiler Halter für Briefkästen aus Edelstahl. Rostfrei und witterungsbeständig für eine langlebige Lösung.",
+  },
+  {
+    title: "Modernes Edelstahl-Rankgitter",
+    category: "Edelstahl",
+    image: "/edelstahl/Rankgitter Edelstahl 2.jpg",
+    description:
+      "Stilvolles und robustes Rankgitter aus Edelstahl für Garten und Fassadenbegrünung. Wetterfest und pflegeleicht für langanhaltende Schönheit.",
   },
   {
     title: "Moderne Balkongeländer",
     category: "Geländer",
-    image:
-      "https://images.unsplash.com/photo-1614597396930-cd6760b99f7c?q=80&w=2070",
+    image: "/Treppe+Geländer/20241216_143805.jpg",
     description:
       "Minimalistische Geländer aus Edelstahl und Glas für ein Mehrfamilienhaus.",
   },
   {
+    title: "Feuerverzinktes Stahlgeländer – Langlebig & Witterungsbeständig",
+    category: "Geländer",
+    image: "public/Geländer/Stahl Feuerverzinkt 1.jpg",
+    description:
+      "Stabiler und feuerverzinkter Stahl für langlebige Geländerkonstruktionen. Optimaler Schutz vor Rost und Witterungseinflüssen.",
+  },
+  {
     title: "Kunstvolle Metallskulptur",
     category: "Metallgestaltung",
-    image:
-      "https://images.unsplash.com/photo-1528323273322-d81458248d40?q=80&w=2070",
+    image: "/Sichtschutz Stahl/Screenshot 2024-05-17 124658.png",
     description:
-      "Individuelle Metallskulptur als Blickfang für den Eingangsbereich eines Unternehmens.",
+      "Feuerverzinkter Stahlsichtschutz mit einer natürlichen Füllung aus sibirischer Lärche – robust, witterungsbeständig und stilvoll für den Außenbereich.",
   },
   {
-    title: "Sicherheitstür mit Spezialverriegelung",
-    category: "Sicherheitslösungen",
-    image:
-      "https://images.unsplash.com/photo-1529422643029-d4585747aaf2?q=80&w=2070",
+    title: "Individuelle Aluminium-Verkleidung für Lastenrad",
+    category: "Aluminiumarbeiten",
+    image: "/aluminium-schweissen/Screenshot 2024-05-17 124912.png",
     description:
-      "Hochsichere Metalltür mit mehrfacher Verriegelung für einen gewerblichen Kunden.",
+      "Hochwertige Aluminium-Seitenverkleidung für ein Babboe Curve Lastenrad, präzise zugeschnitten und mit personalisierter Namensgravur versehen. Die pulverbeschichtete Oberfläche sorgt für langlebigen Schutz und eine edle Optik. Ideal für individuelle Anpassungen und Branding.",
   },
   {
-    title: "Metall-Einlegearbeit",
+    title: "Individuelle Aluminium-Verkleidung für Lastenrad",
+    category: "Aluminiumarbeiten",
+    image: "/aluminium-schweissen/Screenshot 2024-05-17 124859.png",
+    description:
+      "Hochwertige Aluminium-Seitenverkleidung für ein Babboe Curve Lastenrad, präzise zugeschnitten und mit personalisierter Namensgravur versehen. Die pulverbeschichtete Oberfläche sorgt für langlebigen Schutz und eine edle Optik. Ideal für individuelle Anpassungen und Branding.",
+  },
+  {
+    title: "Maßgefertigte Blecharbeiten für Fassadenschutz",
     category: "Anderes",
-    image:
-      "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=2009",
+    image: "/Blecharbeiten/Abkantung Wetterblech.png",
     description:
-      "Kunstvolle Einlegearbeit aus verschiedenen Metallen für ein exklusives Designprojekt.",
+      "Präzise angefertigte und montierte Abkantbleche zum Schutz der Fassade vor Witterungseinflüssen. Langlebige Lösung mit sauberer Verarbeitung für einen optimalen Schutz des Gebäudes.",
   },
 ];
 

@@ -96,7 +96,7 @@ const Header = () => {
                 scrolled ? "text-steel-dark" : "text-white"
               )}
             >
-              Metallbaumeister Albrecht
+              <img src="/logo/logo.svg" alt="Logo" className="h-12 w-auto" />
             </a>
 
             {/* Desktop Navigation */}

@@ -10,6 +10,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import MaterialWahl from "@/components/sections/MaterialWahl";
 import Contact from "@/components/sections/Contact";
 import CTA from "@/components/sections/CTA";
+import ContactButtons from "@/components/ui/ContactButtons";
 
 const Index = () => {
   useEffect(() => {
@@ -41,6 +42,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
+        <ContactButtons />
         <Hero />
         <About />
         <Services />
