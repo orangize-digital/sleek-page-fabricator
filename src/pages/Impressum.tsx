@@ -1,18 +1,12 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Services from "@/components/sections/Services";
-import Projects from "@/components/sections/Projects";
-import Process from "@/components/sections/Process";
-import Testimonials from "@/components/sections/Testimonials";
-import MaterialWahl from "@/components/sections/MaterialWahl";
 import Contact from "@/components/sections/Contact";
-import CTA from "@/components/sections/CTA";
 import ContactButtons from "@/components/ui/ContactButtons";
+import ImpressumHero from "@/components/sections/ImpressumHero";
 
-const Index = () => {
+const Impressum = () => {
   useEffect(() => {
     // Handle reveal animations on scroll
     const handleScroll = () => {
@@ -43,14 +37,8 @@ const Index = () => {
       <Header />
       <main>
         <ContactButtons />
-        <Hero />
-        <About />
-        <Services />
-        <MaterialWahl />
-        <Projects />
-        <CTA />
-        <Process />
-        <Testimonials />
+        <ImpressumHero />
+
         <Contact />
       </main>
       <Footer />
@@ -58,4 +46,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Impressum;

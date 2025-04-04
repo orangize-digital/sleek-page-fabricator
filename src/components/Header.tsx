@@ -90,7 +90,14 @@ const Header = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between">
             <a
-              href="#home"
+              href="/"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+                // else let the link work normally (navigate to homepage)
+              }}
               className={cn(
                 "flex items-center space-x-2 text-xl font-bold transition-colors duration-300",
                 scrolled ? "text-steel-dark" : "text-white"

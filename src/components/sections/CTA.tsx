@@ -30,7 +30,7 @@ const CTA = () => {
     <section className="py-20 relative" ref={sectionRef}>
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 backdrop-blur-sm bg-steel-/90 z-10"></div>
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/30 z-10"></div>
         <img
           src="/hero-img1.jpg"
           alt="Metal workshop"
@@ -40,10 +40,10 @@ const CTA = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Bereit für Ihr nächstes Metallbauprojekt?
           </h2>
-          <p className="text-black text-lg mb-10 max-w-2xl mx-auto">
+          <p className="text-white text-lg mb-10 max-w-2xl mx-auto">
             Kontaktieren Sie uns noch heute für eine unverbindliche Beratung und
             ein individuelles Angebot. Wir freuen uns darauf, Ihre Ideen zu
             verwirklichen.
@@ -58,7 +58,9 @@ const CTA = () => {
               +49 (0) 123 456 789 00
             </a>
             <a
-              href="#contact"
+              href="https://form.jotform.com/250872969429373"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-steel-dark hover:bg-gray-100 px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Anfrage senden
