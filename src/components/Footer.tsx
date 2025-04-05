@@ -21,7 +21,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-0.5 flex-shrink-0" />
-                <span>Berenbusch 1, 31675 Bückeburg</span>
+                <span>Am Hafen Berenbusch 1, 31675 Bückeburg</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 flex-shrink-0" />
@@ -32,10 +32,10 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 flex-shrink-0" />
                 <a
-                  href="mailto:info@metallbaumeister-albrecht.de"
+                  href="mailto:ra@metallbaumeister-albrecht.info"
                   className="hover:underline"
                 >
-                  info@metallbaumeister-albrecht.de
+                  ra@metallbaumeister-albrecht.info
                 </a>
               </li>
             </ul>

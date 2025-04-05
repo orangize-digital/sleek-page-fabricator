@@ -45,8 +45,8 @@ const About = () => {
               </div>
               <div className="reveal">
                 <p className="text-gray-700 mb-6">
-                  Metallbaumeister Robert Albrecht steht für höchste Qualität
-                  und Präzision in der Metallverarbeitung. Er verbindet
+                  Metallbaumeister-Albrecht steht für höchste Qualität und
+                  Präzision in der Metallverarbeitung. Wir verbinden
                   traditionelles Handwerk mit modernen Technologien, um
                   maßgeschneiderte Lösungen zu schaffen, die sowohl funktional
                   als auch ästhetisch überzeugen.
@@ -54,18 +54,19 @@ const About = () => {
               </div>
               <div className="reveal">
                 <p className="text-gray-700 mb-6">
-                  Mit jahrelanger Erfahrung in der Branche bietet Robert
-                  Albrecht hochwertige Metallarbeiten für anspruchsvolle Kunden.
-                  Seine Leidenschaft für Perfektion spiegelt sich in jedem
-                  Detail seiner Arbeit wider.
+                  Mit jahrelanger Erfahrung in der Branche bieten wir
+                  hochwertige Metallarbeiten für anspruchsvolle Kunden. Unsere
+                  Leidenschaft für Perfektion spiegelt sich in jedem Detail
+                  unserer Arbeit wider.
                 </p>
               </div>
               <div className="reveal">
                 <p className="text-gray-700">
-                  Die Stärke seines Unternehmens liegt in der individuellen
+                  Die Stärke unseres Unternehmens liegt in der individuellen
                   Beratung und der präzisen Umsetzung komplexer Anforderungen.
-                  Vom ersten Gespräch bis zur finalen Montage begleitet er seine
-                  Kunden und verwirklicht ihre Ideen in beständigem Metall.
+                  Vom ersten Gespräch bis zur finalen Montage begleiten wir
+                  unsere Kunden und verwirklichen ihre Ideen in beständigem
+                  Metall.
                 </p>
               </div>
 
