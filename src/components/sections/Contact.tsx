@@ -73,7 +73,7 @@ const Contact = () => {
                   icon={<MapPin className="w-5 h-5 text-steel-dark" />}
                   title="Adresse"
                 >
-                  Tannenweg 15, 31675 Bückeburg, Deutschland
+                  Am Hafen Berenbusch 1, 31675 Bückeburg
                 </InfoRow>
 
                 <InfoRow

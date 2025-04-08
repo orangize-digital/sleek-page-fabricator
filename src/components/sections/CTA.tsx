@@ -51,11 +51,11 @@ const CTA = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="tel:+4912345678900"
+              href="tel:+491713310241"
               className="bg-steel-dark hover:bg-steel-DEFAULT text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <PhoneCall className="mr-2 h-5 w-5" />
-              +49 (0) 123 456 789 00
+              +49 (0) 1713310241
             </a>
             <a
               href="https://form.jotform.com/250872969429373"
