@@ -42,7 +42,7 @@ const DatenschutzHero = () => {
           <div className="max-w-3xl animate-fade-in">
             <div className="inline-block mb-6 px-4 py-2 border-2 border-primary rounded-full bg-white/15 backdrop-blur-sm">
               <span className="text-white font-medium text-sm md:text-base">
-                Metallbaumeister seit 2005
+                Meisterqualität im Metallbau
               </span>
             </div>
 
