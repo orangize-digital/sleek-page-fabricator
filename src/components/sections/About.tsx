@@ -73,7 +73,7 @@ const About = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 reveal">
                 <div className="glass-panel p-6 text-center">
                   <div className="text-3xl font-bold text-steel-dark mb-2">
-                    25+
+                    20+
                   </div>
                   <div className="text-gray-700">Jahre Erfahrung</div>
                 </div>
