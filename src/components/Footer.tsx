@@ -78,6 +78,12 @@ const Footer = () => {
             >
               Datenschutz
             </a>
+            <a
+              href="/agb"
+              className="text-sm text-white/70 hover:text-white transition-colors"
+            >
+              AGB
+            </a>
           </div>
         </div>
       </div>
