@@ -36,6 +36,18 @@ const Hero = () => {
             Vom Entwurf bis zur Montage – alles aus einer Hand.
           </p>
 
+          <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4 text-steel-dark"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M16.707 5.293a1 1 0 010 1.414l-7.414 7.414a1 1 0 01-1.414 0L3.293 9.707a1 1 0 011.414-1.414L8 11.586l6.293-6.293a1 1 0 011.414 0z" />
+            </svg>
+            DIN EN 1090-2 EXC2 zertifiziert
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
             <Button
               className="bg-steel-dark hover:bg-steel-light text-white px-8 py-7 rounded-lg font-medium text-base transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
@@ -62,25 +74,27 @@ const Hero = () => {
       </div>
 
       {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-center animate-bounce">
-        <span className="text-white text-sm font-medium mb-2 drop-shadow-sm">
-          Mehr entdecken
-        </span>
-        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-steel-dark/40 backdrop-blur-sm">
-          <svg
-            className="w-6 h-6 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            ></path>
-          </svg>
+      <div className="hidden md:flex absolute bottom-10 w-full justify-center animate-bounce">
+        <div className="flex flex-col items-center text-center">
+          <span className="text-white text-sm font-medium mb-2 drop-shadow-sm">
+            Mehr entdecken
+          </span>
+          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-steel-dark/40 backdrop-blur-sm">
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </section>

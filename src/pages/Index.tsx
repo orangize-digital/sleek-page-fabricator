@@ -44,10 +44,10 @@ const Index = () => {
       <main>
         <ContactButtons />
         <Hero />
-        <About />
-        <Services />
-        <MaterialWahl />
+        {/* <About /> */}
         <Projects />
+        <Services />
+        {/* <MaterialWahl /> */}
         <CTA />
         <Process />
         <Testimonials />

@@ -99,7 +99,9 @@ const Testimonials = () => {
                 <h4 className="text-lg font-semibold text-gray-900">
                   {testimonial.name}
                 </h4>
-                <p className="text-sm text-gray-500">Verified Google Review</p>
+                <p className="text-sm text-gray-500">
+                  Verifizierte Google-Bewertung
+                </p>
               </div>
             </div>
           ))}

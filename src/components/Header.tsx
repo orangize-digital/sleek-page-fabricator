@@ -70,10 +70,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: "Über uns", href: "#about" },
-    { name: "Leistungen", href: "#services" },
-    { name: "Materialwahl", href: "#materials" },
+    // { name: "Über uns", href: "#about" },
+    // { name: "Materialwahl", href: "#materials" },
     { name: "Projekte", href: "#projects" },
+    { name: "Leistungen", href: "#services" },
     { name: "Prozess", href: "#process" },
     { name: "Referenzen", href: "#testimonials" },
     { name: "Kontakt", href: "#contact" },

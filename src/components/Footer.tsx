@@ -14,6 +14,17 @@ const Footer = () => {
               Qualität und Präzision in der Metallbearbeitung seit über 20
               Jahren. Ihr zuverlässiger Partner für individuelle Metalllösungen.
             </p>
+            <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4 text-steel-dark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M16.707 5.293a1 1 0 010 1.414l-7.414 7.414a1 1 0 01-1.414 0L3.293 9.707a1 1 0 011.414-1.414L8 11.586l6.293-6.293a1 1 0 011.414 0z" />
+              </svg>
+              DIN EN 1090-2 EXC2 zertifiziert
+            </div>
           </div>
 
           <div className="space-y-4">

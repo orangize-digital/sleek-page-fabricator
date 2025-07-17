@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { flushSync } from "react-dom";
 
 const projects = [
   {
@@ -9,32 +10,88 @@ const projects = [
     description: "Freitragende Designtreppe aus Stahl für ein modernes Loft.",
   },
   {
+    title: "Podesttreppe feuerverzinkt mit Geländer",
+    category: "Treppen",
+    image: "/Treppen/Podesttreppe Feuerverzinkt .jpg",
+    description:
+      "Witterungsbeständige Außentreppe aus feuerverzinktem Stahl mit Edelstahlgeländer – ideal für den Zugang zum Obergeschoss.",
+  },
+  {
+    title: "Kompakte Podesttreppe – verzinkt",
+    category: "Treppen",
+    image: "/Treppen/Podesttreppe Feuerverzinkt.jpg",
+    description:
+      "Robuste und platzsparende Konstruktion mit Gitterroststufen – langlebig und pflegeleicht.",
+  },
+  {
+    title: "Feuerverzinkte Treppe mit Gitterroststufen",
+    category: "Treppen",
+    image: "/Treppen/Treppe Feuerverzinkt.jpg",
+    description:
+      "Schlichte, funktionale Treppe mit offenem Gitterrost – für Keller- oder Industriezugänge geeignet.",
+  },
+  {
+    title: "Verzinkte Treppe mit Edelstahlhandlauf",
+    category: "Treppen",
+    image: "/Treppen/Treppe verzinkt + Edelstahl Handlauf.jpg",
+    description:
+      "Kombination aus verzinktem Stahlgestell und Edelstahlhandlauf – modern, stabil und pflegeleicht.",
+  },
+  {
+    title: "Pulverbeschichtete Wangentreppe mit Edelstahlhandlauf",
+    category: "Treppen",
+    image: "/Treppen/Wangentreppe Pulverbeschichtet.jpg",
+    description:
+      "Moderne Außentreppe mit seitlichen Wangen und hochwertigem Geländer – farbbeschichtet und elegant.",
+  },
+  {
     title: "Schmiedeeisernes Einfahrtstor",
     category: "Tore",
-    image: "/Hoftor/Hoftor Einfahrt Stahl Feuerverzinkt.jpg",
+    image: "/Tore/Hoftor Einfahrt Stahl Feuerverzinkt.jpg",
     description:
       "Handgeschmiedetes Einfahrtstor mit aufwendigen Verzierungen für eine familien haus.",
   },
   {
-    title: "Robuster Edelstahl-Auflaufpfosten",
-    category: "Edelstahl",
-    image: "/edelstahl/Auflaufpfosten Edelstahl.png",
+    title: "Elektrisches Schiebetor mit Pulverbeschichtung",
+    category: "Tore",
+    image: "/Tore/Elektr. Schiebetor Pulverb..jpg",
     description:
-      "Hochwertiger Edelstahl-Auflaufpfosten für sichere Führung und Schutz. Witterungsbeständig und langlebig für den Einsatz in verschiedenen Bereichen.",
+      "Modernes Schiebetor aus pulverbeschichtetem Metall – elektrisch betrieben für höchsten Komfort und Sicherheit.",
+  },
+  {
+    title: "Klassisches Hoftor – feuerverzinkt & pulverbeschichtet",
+    category: "Tore",
+    image: "/Tore/Hoftor Feuerverzinkt & Pulv..jpg",
+    description:
+      "Zeitloses Einfahrtstor mit Zierspitzen – feuerverzinkt und pulverbeschichtet für stilvolle Langlebigkeit.",
+  },
+  {
+    title: "Schiebetor mit Holzoptik – verzinkt & pulverbeschichtet",
+    category: "Tore",
+    image: "/Tore/Schiebetor HA Verzinkt & Pulverbe..jpg",
+    description:
+      "Robuste Stahlkonstruktion mit Holzdekor-Elementen – modernes Design trifft wartungsarme Technik.",
   },
   {
     title: "Edelstahl-Briefkastenhalter für Stabilität und Design",
     category: "Edelstahl",
-    image: "/edelstahl/Briefkastenhalter Edelstahl.png",
+    image: "/Edelstahl/Briefkastenhalter Edelstahl.png",
     description:
       "Eleganter und stabiler Halter für Briefkästen aus Edelstahl. Rostfrei und witterungsbeständig für eine langlebige Lösung.",
   },
+  // {
+  //   title: "Modernes Edelstahl-Rankgitter",
+  //   category: "Edelstahl",
+  //   image: "/Edelstahl/Rankgitter Edelstahl 2.jpg",
+  //   description:
+  //     "Stilvolles und robustes Rankgitter aus Edelstahl für Garten und Fassadenbegrünung. Wetterfest und pflegeleicht für langanhaltende Schönheit.",
+  // },
   {
-    title: "Modernes Edelstahl-Rankgitter",
+    title: "Verzinkte Treppe mit Edelstahl-Handlauf",
     category: "Edelstahl",
-    image: "/edelstahl/Rankgitter Edelstahl 2.jpg",
+    image: "/Edelstahl/Treppe verzinkt + Edelstahl Handlauf.jpg",
     description:
-      "Stilvolles und robustes Rankgitter aus Edelstahl für Garten und Fassadenbegrünung. Wetterfest und pflegeleicht für langanhaltende Schönheit.",
+      "Kombination aus verzinktem Treppenkorpus und hochwertigem Edelstahl-Handlauf – langlebig, modern und pflegeleicht.",
   },
   {
     title: "Moderne Balkongeländer",
@@ -46,23 +103,65 @@ const projects = [
   {
     title: "Feuerverzinktes Stahlgeländer – Langlebig & Witterungsbeständig",
     category: "Geländer",
-    image: "public/Geländer/Stahl Feuerverzinkt 1.jpg",
+    image: "Geländer/Stahl Feuerverzinkt 1.jpg",
     description:
       "Stabiler und feuerverzinkter Stahl für langlebige Geländerkonstruktionen. Optimaler Schutz vor Rost und Witterungseinflüssen.",
   },
   {
-    title: "Kunstvolle Metallskulptur",
-    category: "Metallgestaltung",
-    image: "/Sichtschutz Stahl/Screenshot 2024-05-17 124658.png",
+    title: "Edelstahl-Glasgeländer mit Sichtschutz",
+    category: "Geländer",
+    image: "/Geländer/EdelstahlGlasgelaender.jpg",
     description:
-      "Feuerverzinkter Stahlsichtschutz mit einer natürlichen Füllung aus sibirischer Lärche – robust, witterungsbeständig und stilvoll für den Außenbereich.",
+      "Modernes Balkongeländer mit getöntem Glas und Edelstahlrahmen – ideal für Privatsphäre und stilvolles Design.",
+  },
+  {
+    title: "Transparente Glas-Edelstahl-Konstruktion",
+    category: "Geländer",
+    image: "/Geländer/Gelaender Edelstahl Glas.jpg",
+    description:
+      "Schlankes Edelstahlgeländer mit klarem Sicherheitsglas – für lichtdurchflutete Balkone und zeitgemäße Architektur.",
+  },
+  {
+    title: "Pulverbeschichtetes Balkongeländer mit Pflanzen",
+    category: "Geländer",
+    image: "/Geländer/Gelaender Pulverbeschichtet.jpg",
+    description:
+      "Robustes Balkongeländer aus pulverbeschichtetem Metall mit vertikalen Streben – pflegeleicht und ideal für Begrünung.",
+  },
+  {
+    title: "Carport aus Stahl und Glas",
+    category: "Metallgestaltung",
+    image: "/Metallgestaltung/Carport Stahl Glas.jpg",
+    description:
+      "Elegante Stahlkonstruktion mit Glasdach – modernes Carport-Design für Wohnhäuser und Mehrfamilienhäuser.",
+  },
+  {
+    title: "Solar-Carport aus Stahl",
+    category: "Metallgestaltung",
+    image: "/Metallgestaltung/Carport Stahl-Solar.jpg",
+    description:
+      "Umweltfreundliches Carport mit integrierter Solaranlage – stabile Stahlkonstruktion für nachhaltiges Parken.",
+  },
+  {
+    title: "Fahrradüberdachung aus Metall",
+    category: "Metallgestaltung",
+    image: "/Metallgestaltung/Fahrrad Ueberdachung.jpg",
+    description:
+      "Funktionale und moderne Fahrradüberdachung – robuster Witterungsschutz für den öffentlichen oder privaten Raum.",
+  },
+  {
+    title: "Bushaltestellen-Überdachung mit Holzdetails",
+    category: "Metallgestaltung",
+    image: "/Metallgestaltung/Ueberdachung Bushaltestelle.jpg",
+    description:
+      "Überdachung für Bushaltestellen aus Stahl mit Sitzfläche aus Holz – wetterfest und vandalismussicher.",
   },
   {
     title: "Individuelle Aluminium-Verkleidung für Lastenrad",
     category: "Aluminiumarbeiten",
     image: "/aluminium-schweissen/Screenshot 2024-05-17 124912.png",
     description:
-      "Hochwertige Aluminium-Seitenverkleidung für ein Babboe Curve Lastenrad, präzise zugeschnitten und mit personalisierter Namensgravur versehen. Die pulverbeschichtete Oberfläche sorgt für langlebigen Schutz und eine edle Optik. Ideal für individuelle Anpassungen und Branding.",
+      "Pulverbeschichtete Aluminiumverkleidung für ein Babboe Curve Lastenrad – passgenau gefertigt, mit Namensgravur. Langlebig, individuell, hochwertig.",
   },
   {
     title: "Individuelle Aluminium-Verkleidung für Lastenrad",
@@ -72,11 +171,46 @@ const projects = [
       "Hochwertige Aluminium-Seitenverkleidung für ein Babboe Curve Lastenrad, präzise zugeschnitten und mit personalisierter Namensgravur versehen. Die pulverbeschichtete Oberfläche sorgt für langlebigen Schutz und eine edle Optik. Ideal für individuelle Anpassungen und Branding.",
   },
   {
-    title: "Maßgefertigte Blecharbeiten für Fassadenschutz",
+    title: "Terrasse mit modernem Staketengeländer",
     category: "Anderes",
-    image: "/Blecharbeiten/Abkantung Wetterblech.png",
+    image: "/Anderes/Terasse SAL.jpg",
     description:
-      "Präzise angefertigte und montierte Abkantbleche zum Schutz der Fassade vor Witterungseinflüssen. Langlebige Lösung mit sauberer Verarbeitung für einen optimalen Schutz des Gebäudes.",
+      "Schlichte und stilvolle Terrasse mit vertikalem Geländer – ideal für einen gemütlichen Außenbereich.",
+  },
+  {
+    title: "Terrassenfläche mit dekorativer Bepflanzung",
+    category: "Anderes",
+    image: "/Anderes/Terasse SAR.jpg",
+    description:
+      "Großzügige Terrassenfläche mit klaren Linien und schönem Ausblick – ideal für den Sommer.",
+  },
+  {
+    title: "Terrasse mit Edelstahlgeländer",
+    category: "Anderes",
+    image: "/Anderes/Terasse VA.jpg",
+    description:
+      "Zeitgemäße Terrassengestaltung mit feinem Edelstahlgeländer – hochwertig und pflegeleicht.",
+  },
+  {
+    title: "Feuerverzinkte Terrassenüberdachung",
+    category: "Anderes",
+    image: "/Anderes/TerassenUeberdachung Feuerverzinkt.jpg",
+    description:
+      "Solide Überdachung für Terrassen aus feuerverzinktem Stahl und Glas – Schutz bei jedem Wetter.",
+  },
+  {
+    title: "Zierzaun aus Schmiedeeisen",
+    category: "Anderes",
+    image: "/Anderes/Zaun Schmiedeeisern.jpg",
+    description:
+      "Traditionelles Zaunelement mit verspielten Ornamenten – ideal für Vorgärten und Einfriedungen.",
+  },
+  {
+    title: "Moderner Staketen-Zaun",
+    category: "Anderes",
+    image: "/Anderes/Zaun Staketen.jpg",
+    description:
+      "Langlebiger Metallzaun mit schlichten vertikalen Streben – funktionale Begrenzung mit klarer Linie.",
   },
 ];
 
@@ -84,7 +218,7 @@ const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeFilter, setActiveFilter] = useState("Alle");
   const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [visibleProjects, setVisibleProjects] = useState(3);
+  const [visibleProjects, setVisibleProjects] = useState(6);
 
   const filters = [
     "Alle",
@@ -115,17 +249,31 @@ const Projects = () => {
 
   useEffect(() => {
     if (activeFilter === "Alle") {
-      setFilteredProjects(projects);
+      const shuffled = shuffleArray(projects);
+      setFilteredProjects(shuffled);
+      setVisibleProjects(6);
     } else {
-      setFilteredProjects(
-        projects.filter((project) => project.category === activeFilter)
+      const filtered = projects.filter(
+        (project) => project.category === activeFilter
       );
+      setFilteredProjects(filtered);
+      setVisibleProjects(10);
     }
-    setVisibleProjects(3);
   }, [activeFilter]);
 
   const loadMore = () => {
-    setVisibleProjects((prev) => Math.min(prev + 3, filteredProjects.length));
+    flushSync(() => {
+      setVisibleProjects((prev) => Math.min(prev + 3, filteredProjects.length));
+    });
+  };
+
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
   };
 
   const showLess = () => {
@@ -199,23 +347,32 @@ const Projects = () => {
           ))}
         </div>
 
-        {filteredProjects.length > 3 && (
+        {filteredProjects.length > 6 && (
           <div className="mt-12 text-center reveal">
             {visibleProjects < filteredProjects.length ? (
               <button
                 onClick={loadMore}
-                className="inline-flex items-center justify-center px-8 py-3 bg-steel-dark hover:bg-steel-light text-white rounded-lg transition-colors duration-300 font-medium"
+                className="bg-white text-steel-dark hover:bg-gray-100 px-8 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Mehr anzeigen <ArrowRight className="ml-2 h-5 w-5" />
               </button>
             ) : (
               <button
                 onClick={showLess}
-                className="inline-flex items-center justify-center px-8 py-3 bg-steel-dark hover:bg-steel-light text-white rounded-lg transition-colors duration-300 font-medium"
+                className="bg-white text-steel-dark hover:bg-gray-100 px-8 py-3 rounded-lg font-medium inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Weniger anzeigen <ArrowLeft className="ml-2 h-5 w-5" />
               </button>
             )}
+            <p className="my-4">oder</p>
+            <a
+              href="https://form.jotform.com/250872969429373"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 bg-steel-dark hover:bg-steel-light text-white rounded-lg transition-colors duration-300 font-medium"
+            >
+              Jetzt unverbindliche Anfrage stellen
+            </a>
           </div>
         )}
       </div>
