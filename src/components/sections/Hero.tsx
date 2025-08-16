@@ -36,7 +36,11 @@ const Hero = () => {
             Vom Entwurf bis zur Montage – alles aus einer Hand.
           </p>
 
-          <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md">
+          {/* Zertifikat Badge with tooltip + link */}
+          <a
+            href="/zertifikate"
+            className="group relative inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md transition-all duration-300 hover:bg-yellow-300"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-4 h-4 text-steel-dark"
@@ -46,7 +50,11 @@ const Hero = () => {
               <path d="M16.707 5.293a1 1 0 010 1.414l-7.414 7.414a1 1 0 01-1.414 0L3.293 9.707a1 1 0 011.414-1.414L8 11.586l6.293-6.293a1 1 0 011.414 0z" />
             </svg>
             DIN EN 1090-2 EXC2 zertifiziert
-          </div>
+            {/* Tooltip */}
+            <span className="absolute left-full ml-3 px-3 py-1 bg-white text-black text-xs rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              Gehe zu Zertifikate-Seite
+            </span>
+          </a>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
             <Button
