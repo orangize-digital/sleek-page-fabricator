@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactButtons = () => {
   const phoneNumber = "+491713310241";
-  const email = "ra@metallbaumeister-albrecht.info";
+  const email = "hafen@metallbaumeister-albrecht.de";
 
   return (
     <>

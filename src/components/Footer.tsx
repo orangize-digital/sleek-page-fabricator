@@ -43,10 +43,10 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 flex-shrink-0" />
                 <a
-                  href="mailto:ra@metallbaumeister-albrecht.info"
+                  href="mailto:hafen@metallbaumeister-albrecht.de"
                   className="hover:underline"
                 >
-                  ra@metallbaumeister-albrecht.info
+                  hafen@metallbaumeister-albrecht.de
                 </a>
               </li>
             </ul>

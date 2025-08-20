@@ -47,8 +47,8 @@ const ImpressumHero = () => {
             Telefonnummer: +49 171 3310241
             <br />
             E-Mail-Adresse:{" "}
-            <a href="mailto:ra@metallbaumeister-albrecht.info">
-              ra@metallbaumeister-albrecht.info
+            <a href="mailto:hafen@metallbaumeister-albrecht.de">
+              hafen@metallbaumeister-albrecht.de
             </a>
           </p>
 

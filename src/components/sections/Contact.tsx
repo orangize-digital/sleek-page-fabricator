@@ -93,10 +93,10 @@ const Contact = () => {
                   title="E-Mail"
                 >
                   <a
-                    href="mailto:ra@metallbaumeister-albrecht.info"
+                    href="mailto:hafen@metallbaumeister-albrecht.de"
                     className="hover:text-steel-dark transition-colors"
                   >
-                    ra@metallbaumeister-albrecht.info
+                    hafen@metallbaumeister-albrecht.de
                   </a>
                 </InfoRow>
 
