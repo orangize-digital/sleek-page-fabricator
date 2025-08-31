@@ -32,7 +32,7 @@ const CTA = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 backdrop-blur-sm bg-black/30 z-10"></div>
         <img
-          src="/hero-img1.jpg"
+          src="/Geländer/EdelstahlGlasgelaender.jpg"
           alt="Metal workshop"
           className="w-full h-full object-cover"
         />
