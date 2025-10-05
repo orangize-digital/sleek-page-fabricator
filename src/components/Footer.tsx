@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-0.5 flex-shrink-0" />
-                <span>Am Hafen Berenbusch 1, 31675 Bückeburg</span>
+                <span>Hafen Berenbusch 1, 31675 Bückeburg</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 flex-shrink-0" />
