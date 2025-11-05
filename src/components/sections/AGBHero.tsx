@@ -45,7 +45,7 @@ const AGBHero = () => {
 
           <h3 className="mt-6">AGB herunterladen:</h3>
           <a
-            href="/public/AGB_Metallbaumeister_Albrecht_grosser_Abstand.pdf"
+            href="/AGB_Metallbaumeister_Albrecht_grosser_Abstand.pdf"
             className="text-primary underline"
             target="_blank"
             rel="noopener noreferrer"

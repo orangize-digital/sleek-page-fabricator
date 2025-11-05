@@ -35,7 +35,7 @@ const ImpressumHero = () => {
             <br />
             Metallbaumeister Albrecht
             <br />
-            Berenbusch 1
+            Hafen Berenbusch 1
             <br />
             31675 Bückeburg
             <br />
