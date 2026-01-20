@@ -6,19 +6,19 @@ const zertifikate = [
     title: "AEVO-IHK",
     description:
       "Ausbildereignungsprüfung (IHK) – berechtigt zur Ausbildung von Lehrlingen im Metallbau-Handwerk.",
-    file: "/zertifikate/AEVO-IHK.jpg",
+    file: "/zertifikate/aevo-ihk.jpg",
   },
   {
     title: "Meisterprüfungszeugnis",
     description:
       "Offizielles Meisterprüfungszeugnis im Metallbauer-Handwerk – Nachweis höchster Fachkompetenz.",
-    file: "/zertifikate/Meisterpruefungszeugnis.jpg",
+    file: "/zertifikate/meisterpruefungszeugnis.jpg",
   },
   {
     title: "SAP Zertifikat",
     description:
       "Zertifikat für spezielle Kenntnisse und Fortbildungen im Bereich SAP-Anwendungen.",
-    file: "/zertifikate/SAP-Zertifikat.jpg",
+    file: "/zertifikate/sap-zertifikat.jpg",
   },
 ];
 

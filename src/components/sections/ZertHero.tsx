@@ -10,7 +10,7 @@ const ZertifikateHero = () => {
       <div className="absolute inset-0 -z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-steel-dark/70 z-10"></div>
         <img
-          src="/Treppen/Podesttreppe Feuerverzinkt .jpg"
+          src="/treppen/podesttreppe-feuerverzinkt-small.jpg"
           alt="Zertifikate Hintergrund"
           className="w-full h-full object-cover object-center"
         />

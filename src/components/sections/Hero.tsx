@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-steel-dark/70 z-10"></div>
         <img
-          src="/Geländer/Screenshot 2024-05-17 124618.png"
+          src="/gelaender/screenshot-2024-05-17-124618.png"
           alt="Metal Welding"
           className="w-full h-full object-cover object-center"
         />
@@ -62,7 +62,7 @@ const Hero = () => {
               asChild
             >
               <a
-                href="https://form.jotform.com/250872969429373"
+                href="https://form.jotform.com/253192414832354"
                 target="_blank"
               >
                 Kontakt aufnehmen

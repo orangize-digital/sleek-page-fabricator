@@ -9,10 +9,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Metallbaumeister Albrecht</h3>
+            <h3 className="text-xl font-semibold">Metallbaumeister-Albrecht</h3>
             <p className="text-white/80 max-w-sm">
-              Qualität und Präzision in der Metallbearbeitung seit über 20
-              Jahren. Ihr zuverlässiger Partner für individuelle Metalllösungen.
+              Qualität und Präzision in der Metallbranche – mit über 20
+              Jahren Erfahrung. Ihr zuverlässiger Partner für individuelle Metalllösungen.
             </p>
             <div className="inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md">
               <svg

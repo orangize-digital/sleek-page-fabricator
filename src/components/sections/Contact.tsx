@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, memo } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import ContactForm from "../ContactForm";
+import WhatsAppIcon from "../icons/WhatsAppIcon";
 
 const InfoRow = memo(
   ({
@@ -101,6 +103,20 @@ const Contact = () => {
                 </InfoRow>
 
                 <InfoRow
+                  icon={<WhatsAppIcon className="w-5 h-5 text-steel-dark" />}
+                  title="WhatsApp"
+                >
+                  <a
+                    href="https://wa.me/491713310241"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-steel-dark transition-colors"
+                  >
+                    +49 (0) 1713310241
+                  </a>
+                </InfoRow>
+
+                <InfoRow
                   icon={<Clock className="w-5 h-5 text-steel-dark" />}
                   title="Öffnungszeiten"
                 >
@@ -112,25 +128,10 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right: Text & Button */}
-          <div className="md:w-1/2 flex items-center justify-center">
-            <div className="p-8 max-w-md text-center">
-              <h3 className="text-2xl font-semibold mb-4 text-steel-dark">
-                Kontaktformular
-              </h3>
-              <p className="text-gray-700 mb-6">
-                Sie können uns direkt über das Formular kontaktieren. Klicken
-                Sie auf den Button, um Ihre Nachricht zu senden.
-              </p>
-              <a
-                href="https://form.jotform.com/250872969429373"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-steel-dark hover:bg-steel-light text-white px-6 py-3 rounded-lg inline-block transition-colors duration-300"
-                aria-label="Kontaktformular öffnen"
-              >
-                Jetzt Nachricht senden
-              </a>
+          {/* Right: Contact Form */}
+          <div className="md:w-1/2">
+            <div className="glass-panel p-8">
+              <ContactForm />
             </div>
           </div>
         </div>

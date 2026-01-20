@@ -32,7 +32,7 @@ const DatenschutzHero = () => {
         <div className="absolute inset-0 -z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-steel-dark/70 z-10"></div>
           <img
-            src="/Geländer/Screenshot 2024-05-17 124507.png"
+            src="/gelaender/screenshot-2024-05-17-124507.png"
             alt="Metal Welding"
             className="w-full h-full object-cover object-center"
           />

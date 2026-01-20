@@ -9,7 +9,7 @@ const AGBHero = () => {
 
           {/* Background Image */}
           <img
-            src="Geländer/Screenshot 2024-05-17 124618.png"
+            src="/gelaender/screenshot-2024-05-17-124618.png"
             alt="Beispielbild eines Metallbauelements"
             className="w-full h-full object-cover object-center"
           />
@@ -45,7 +45,7 @@ const AGBHero = () => {
 
           <h3 className="mt-6">AGB herunterladen:</h3>
           <a
-            href="/AGB_Metallbaumeister_Albrecht_grosser_Abstand.pdf"
+            href="/agb-metallbaumeister-albrecht.pdf"
             className="text-primary underline"
             target="_blank"
             rel="noopener noreferrer"

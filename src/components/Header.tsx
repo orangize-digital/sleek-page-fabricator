@@ -176,7 +176,7 @@ const Header = () => {
       <button
         onClick={scrollToTop}
         className={cn(
-          "fixed bottom-6 right-6 bg-steel-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20",
+          "fixed bottom-6 left-6 bg-steel-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20",
           showScrollTop
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-10 pointer-events-none"

@@ -10,6 +10,7 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Zertifikate from "./pages/Zertifikate";
 import AGB from "./pages/AGB";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <FloatingWhatsApp />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/danke" element={<Danke />} />
