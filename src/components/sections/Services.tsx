@@ -10,40 +10,40 @@ import {
 
 const services = [
   {
-    icon: <Ruler className="w-10 h-10 text-steel-dark" />,
-    title: "Metallkonstruktionen",
+    icon: <Minimize2 className="w-10 h-10 text-steel-dark" />,
+    title: "Treppengeländer & Handläufe",
     description:
-      "Maßgeschneiderte Stahlkonstruktionen für Industrie- und Privatbedarf, präzise gefertigt nach Ihren Anforderungen.",
+      "Treppengeländer für innen und außen, Balkongeländer und Handläufe aus Edelstahl oder Stahl – maßgefertigt und fachgerecht montiert.",
   },
   {
     icon: <Lock className="w-10 h-10 text-steel-dark" />,
     title: "Tore & Zäune",
     description:
-      "Elegante Einfahrtstore, robuste Industrietore und individuell gestaltete Zäune für maximale Sicherheit und Ästhetik.",
+      "Einfahrtstore, Schiebetore, Hoftore und Metallzäune – feuerverzinkt oder pulverbeschichtet, auch mit elektrischem Antrieb.",
   },
   {
-    icon: <Minimize2 className="w-10 h-10 text-steel-dark" />,
-    title: "Geländer & Treppen",
+    icon: <Ruler className="w-10 h-10 text-steel-dark" />,
+    title: "Stahlbau & Metallkonstruktionen",
     description:
-      "Funktionale und stilvolle Treppen und Geländer aus verschiedenen Metallarten, passend zu Ihrer Architektur.",
+      "Maßgeschneiderte Stahlkonstruktionen, Podeste, Carports und Überdachungen für Gewerbe und Privat. DIN EN 1090-2 zertifiziert.",
   },
   {
     icon: <PenTool className="w-10 h-10 text-steel-dark" />,
-    title: "Metallgestaltung",
+    title: "Metallgestaltung & Schweißarbeiten",
     description:
-      "Kunstvolle Metallobjekte und dekorative Elemente, die Ihre Räume und Außenbereiche aufwerten.",
+      "Kunstvolle Schmiedearbeiten, Zierzäune und individuelle Metallobjekte – von der Schlosserei bis zur Feingestaltung.",
   },
   {
     icon: <Settings className="w-10 h-10 text-steel-dark" />,
-    title: "Reparaturen",
+    title: "Reparaturen & Wartung",
     description:
-      "Professionelle Reparatur und Wartung von Metallkonstruktionen aller Art für langjährige Haltbarkeit.",
+      "Reparatur von Geländern, Toren, Zäunen und Metallkonstruktionen aller Art. Schnell, zuverlässig und zu fairen Preisen.",
   },
   {
     icon: <Shield className="w-10 h-10 text-steel-dark" />,
-    title: "Sicherheitslösungen",
+    title: "Aluminium & Edelstahl",
     description:
-      "Hochwertige Sicherheitstechnik in Metall – von Fenstergittern bis zu Spezialverschlüssen für maximalen Schutz.",
+      "Edelstahl- und Aluminiumarbeiten: Briefkastenhalter, Verkleidungen, Sonderanfertigungen – rostfrei und witterungsbeständig.",
   },
 ];
 
@@ -80,12 +80,13 @@ const Services = () => {
             Unsere Leistungen
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-steel-dark">
-            Vielfältige Lösungen in Metall
+            Metallbau-Leistungen aus Meisterhand
           </h2>
           <p className="text-gray-700">
-            Wir bieten ein breites Spektrum an Metallbauarbeiten für private und
-            gewerbliche Kunden. Jedes Projekt wird individuell geplant und mit
-            höchster Präzision umgesetzt.
+            Von Geländern und Treppen über Tore und Zäune bis hin zu
+            Stahlkonstruktionen – wir bieten das volle Spektrum an
+            Metallbauarbeiten. Jedes Projekt wird individuell geplant und mit
+            höchster Präzision in unserer Werkstatt in Bückeburg umgesetzt.
           </p>
         </div>
 

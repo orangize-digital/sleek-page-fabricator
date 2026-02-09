@@ -374,9 +374,9 @@ const Projects = () => {
             Ausgewählte Referenzen
           </h2>
           <p className="text-gray-700">
-            Entdecken Sie eine Auswahl unserer abgeschlossenen Projekte. Von
-            filigran bis robust – wir setzen Ihre Visionen in beständiges Metall
-            um.
+            Entdecken Sie eine Auswahl unserer abgeschlossenen Projekte –
+            Geländer, Treppen, Tore, Handläufe und mehr. Von filigran bis robust
+            setzen wir Ihre Visionen in beständiges Metall um.
           </p>
         </div>
 

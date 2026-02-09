@@ -1,6 +1,6 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import HeroForm from "@/components/HeroForm";
 
 const Hero = () => {
   return (
@@ -19,64 +19,60 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl animate-fade-in">
-          <div className="inline-block mb-6 px-4 py-2 border-2 border-primary rounded-full bg-white/15 backdrop-blur-sm">
-            <span className="text-white font-medium text-sm md:text-base">
-              Meisterqualität im Metallbau
-            </span>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Left: Text content */}
+          <div className="animate-fade-in">
+            <div className="inline-block mb-6 px-4 py-2 border-2 border-primary rounded-full bg-white/15 backdrop-blur-sm">
+              <span className="text-white font-medium text-sm md:text-base">
+                Meisterqualität im Metallbau
+              </span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white font-bold mb-8 leading-tight drop-shadow-lg">
+              Ihr Metallbaumeister <br className="hidden md:block" />
+              in <span className="text-steel-light">Bückeburg</span>
+            </h1>
+
+            <p className="text-white/95 text-lg md:text-xl mb-10 max-w-2xl font-medium drop-shadow">
+              Geländer, Treppen, Tore und Handläufe – maßgefertigt und
+              fachgerecht montiert. Metallbau aus Meisterhand für Bückeburg,
+              Hannover, Minden und die gesamte Region.
+            </p>
+
+            {/* Zertifikat Badge with tooltip + link */}
+            <a
+              href="/zertifikate"
+              className="group relative inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md transition-all duration-300 hover:bg-yellow-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4 text-steel-dark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M16.707 5.293a1 1 0 010 1.414l-7.414 7.414a1 1 0 01-1.414 0L3.293 9.707a1 1 0 011.414-1.414L8 11.586l6.293-6.293a1 1 0 011.414 0z" />
+              </svg>
+              DIN EN 1090-2 EXC2 zertifiziert
+              {/* Tooltip */}
+              <span className="absolute left-full ml-3 px-3 py-1 bg-white text-black text-xs rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Gehe zu Zertifikate-Seite
+              </span>
+            </a>
+
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
+              <Button
+                variant="outline"
+                className="bg-steel-dark/10 backdrop-blur-sm hover:bg-steel-dark hover:text-white text-white border-2 border-white/40 px-8 py-7 rounded-lg font-medium text-base transition-all duration-300"
+                asChild
+              >
+                <a href="#projects">Projekte ansehen</a>
+              </Button>
+            </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-8 leading-tight drop-shadow-lg">
-            Präzision und Qualität <br className="hidden md:block" />
-            in der <span className="text-steel-light">Metallverarbeitung</span>
-          </h1>
-
-          <p className="text-white/95 text-lg md:text-xl mb-10 max-w-2xl font-medium drop-shadow">
-            Individuelle Lösungen in Metall für Privatkunden und Unternehmen.
-            Vom Entwurf bis zur Montage – alles aus einer Hand.
-          </p>
-
-          {/* Zertifikat Badge with tooltip + link */}
-          <a
-            href="/zertifikate"
-            className="group relative inline-flex items-center gap-2 mb-10 px-4 py-2 rounded-full bg-yellow-400 text-steel-dark text-sm font-semibold shadow-md transition-all duration-300 hover:bg-yellow-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 text-steel-dark"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M16.707 5.293a1 1 0 010 1.414l-7.414 7.414a1 1 0 01-1.414 0L3.293 9.707a1 1 0 011.414-1.414L8 11.586l6.293-6.293a1 1 0 011.414 0z" />
-            </svg>
-            DIN EN 1090-2 EXC2 zertifiziert
-            {/* Tooltip */}
-            <span className="absolute left-full ml-3 px-3 py-1 bg-white text-black text-xs rounded-full opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-              Gehe zu Zertifikate-Seite
-            </span>
-          </a>
-
-          <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
-            <Button
-              className="bg-steel-dark hover:bg-steel-light text-white px-8 py-7 rounded-lg font-medium text-base transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
-              asChild
-            >
-              <a
-                href="https://form.jotform.com/253192414832354"
-                target="_blank"
-              >
-                Kontakt aufnehmen
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-
-            <Button
-              variant="outline"
-              className="bg-steel-dark/10 backdrop-blur-sm hover:bg-steel-dark hover:text-white text-white border-2 border-white/40 px-8 py-7 rounded-lg font-medium text-base transition-all duration-300"
-              asChild
-            >
-              <a href="#projects">Projekte ansehen</a>
-            </Button>
+          {/* Right: Compact form */}
+          <div className="animate-fade-in-right">
+            <HeroForm />
           </div>
         </div>
       </div>
