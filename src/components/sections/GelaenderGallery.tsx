@@ -3,85 +3,85 @@ import { X } from "lucide-react";
 
 const galleryItems = [
   {
-    src: "/gelaender/edelstahlglasgelaender.jpg",
-    alt: "Edelstahl-Glasgeländer mit Sichtschutz",
+    src: "/gelaender/edelstahl-glasgelaender-mit-sichtschutz-balkon.jpg",
+    alt: "Edelstahl Glasgeländer mit Sichtschutz für Balkon in Bückeburg",
     title: "Edelstahl-Glasgeländer mit Sichtschutz",
     description:
       "Modernes Balkongeländer mit getöntem Glas und Edelstahlrahmen – ideal für Privatsphäre und stilvolles Design.",
   },
   {
-    src: "/gelaender/gelaender-edelstahl-glas.jpg",
-    alt: "Transparente Glas-Edelstahl-Konstruktion",
+    src: "/gelaender/glas-edelstahl-gelaender-konstruktion.jpg",
+    alt: "Glas Edelstahl Geländer Konstruktion im modernen Metallbau",
     title: "Glas-Edelstahl-Konstruktion",
     description:
       "Schlankes Edelstahlgeländer mit klarem Sicherheitsglas – für lichtdurchflutete Balkone.",
   },
   {
-    src: "/gelaender/stahl-feuerverzinkt-1.jpg",
-    alt: "Feuerverzinktes Stahlgeländer",
+    src: "/gelaender/feuerverzinktes-stahlgelaender-aussen.jpg",
+    alt: "Feuerverzinktes Stahlgeländer für Außenbereich",
     title: "Feuerverzinktes Stahlgeländer",
     description:
       "Stabiler und feuerverzinkter Stahl für langlebige Geländerkonstruktionen.",
   },
   {
-    src: "/gelaender/gelaender-pulverbeschichtet.jpg",
-    alt: "Pulverbeschichtetes Balkongeländer",
+    src: "/gelaender/pulverbeschichtetes-balkongelaender-stahl.jpg",
+    alt: "Pulverbeschichtetes Balkongeländer aus Stahl",
     title: "Pulverbeschichtetes Balkongeländer",
     description:
       "Robustes Balkongeländer aus pulverbeschichtetem Metall – pflegeleicht und ideal für Begrünung.",
   },
   {
-    src: "/gelaender/gelaender-va-seitenansicht.jpg",
-    alt: "Edelstahlgeländer Seitenansicht",
+    src: "/gelaender/edelstahlgelaender-seitenansicht.jpg",
+    alt: "Edelstahlgeländer Seitenansicht im Eingangsbereich",
     title: "Edelstahlgeländer – Seitenansicht",
     description:
       "Elegantes Edelstahlgeländer mit horizontalen Füllstäben – zeitlos modern.",
   },
   {
-    src: "/gelaender/gelaender-va-vorderansicht.jpg",
-    alt: "Edelstahlgeländer Vorderansicht",
+    src: "/gelaender/edelstahlgelaender-vorderansicht.jpg",
+    alt: "Edelstahlgeländer Vorderansicht an Außentreppe",
     title: "Edelstahlgeländer – Vorderansicht",
     description:
       "Hochwertiges Edelstahlgeländer für Balkone und Terrassen – rostfrei und pflegeleicht.",
   },
   {
-    src: "/gelaender/hafengelaender-mehrparteienhaus.png",
-    alt: "Hafengeländer für Mehrparteienhaus",
+    src: "/gelaender/gelaender-mehrparteienhaus-aussen.png",
+    alt: "Treppengeländer für Mehrparteienhaus im Außenbereich",
     title: "Geländer für Mehrparteienhaus",
     description:
       "Maßgefertigtes Balkongeländer für ein Mehrparteienhaus – robust, sicher und ästhetisch.",
   },
   {
-    src: "/gelaender/terassengelaender.png",
-    alt: "Terrassengeländer aus Metall",
+    src: "/gelaender/terrassengelaender-metallbau.png",
+    alt: "Terrassengeländer aus Metall für Wohnhaus",
     title: "Terrassengeländer",
     description:
       "Schlichtes und modernes Terrassengeländer – ideal für den Außenbereich.",
   },
   {
-    src: "/gelaender/handlauf-eingang.jpg",
-    alt: "Handlauf für Hauseingang",
+    src: "/gelaender/handlauf-edelstahl-hauseingang.jpg",
+    alt: "Edelstahl Handlauf am Hauseingang",
     title: "Handlauf für Hauseingang",
     description:
       "Stabiler Handlauf aus Edelstahl für den Eingangsbereich – sicherer Halt bei jedem Wetter.",
   },
   {
-    src: "/gelaender/handlauf-gartenzugang.png",
-    alt: "Handlauf für Gartenzugang",
+    src: "/gelaender/handlauf-gartenzugang-edelstahl.png",
+    alt: "Handlauf aus Edelstahl für Gartenzugang",
     title: "Handlauf für Gartenzugang",
     description:
       "Eleganter Handlauf für den Gartenzugang – funktional und optisch ansprechend.",
   },
   {
-    src: "/treppe-gelaender/20241216-143805.jpg",
-    alt: "Moderne Balkongeländer",
+    src: "/gelaender/modernes-balkongelaender-metall.jpg",
+    alt: "Modernes Balkongeländer aus Metall",
     title: "Moderne Balkongeländer",
     description:
       "Minimalistische Geländer aus Edelstahl und Glas für ein Mehrfamilienhaus.",
   },
   {
-    src: "/gelaender/stahl-feuerverzinkt.jpg",
-    alt: "Feuerverzinktes Stahlgeländer Detail",
+    src: "/gelaender/feuerverzinktes-stahlgelaender-detail.jpg",
+    alt: "Detailansicht feuerverzinktes Stahlgeländer",
     title: "Feuerverzinkter Stahl – Detail",
     description:
       "Detailansicht eines feuerverzinkten Geländers mit hoher Witterungsbeständigkeit.",

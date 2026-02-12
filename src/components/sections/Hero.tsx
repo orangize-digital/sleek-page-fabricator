@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-16"
+      className="relative min-h-screen flex items-center pt-24 pb-10 lg:pt-16 lg:pb-0"
     >
       {/* Background with enhanced overlay for better visibility */}
       <div className="absolute inset-0 -z-0">

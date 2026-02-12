@@ -5,42 +5,42 @@ const faqs = [
   {
     question: "Was kostet ein Geländer aus Edelstahl?",
     answer:
-      "Die Kosten für ein Edelstahlgeländer hängen von Länge, Design und Befestigungsart ab. Ein einfacher Edelstahl-Handlauf beginnt bei ca. 150 €/lfm, Geländer mit Glasfüllung ab ca. 350 €/lfm. Wir erstellen Ihnen gerne ein individuelles Angebot – die Beratung und das Aufmaß vor Ort sind kostenlos.",
+      "Die Kosten für ein Edelstahlgeländer hängen von Länge, Ausführung, Oberfläche und Montageaufwand ab. Nach einem Aufmaß vor Ort erstellen wir ein individuelles, transparentes Angebot. Pauschalpreise sind bei Maßanfertigungen nicht seriös.",
   },
   {
     question: "Welche Geländer eignen sich für den Außenbereich?",
     answer:
-      "Für Außentreppen und Balkone empfehlen wir feuerverzinkte Stahlgeländer oder Edelstahlgeländer (V2A/V4A). Beide Varianten sind witterungsbeständig und langlebig. Feuerverzinkte Geländer bieten den besten Korrosionsschutz, Edelstahl überzeugt durch eine moderne Optik. Auch pulverbeschichtete Geländer sind eine hervorragende Wahl für den Außenbereich.",
+      "Für den Außenbereich eignen sich besonders feuerverzinkte Stahlgeländer sowie Edelstahlgeländer. Beide Varianten sind witterungsbeständig und langlebig. Die Auswahl richtet sich nach Einsatzort, Optik und Budget.",
   },
   {
-    question: "Fertigen Sie auch Balkongeländer und Treppengeländer an?",
+    question: "Fertigen Sie auch Balkon- und Treppengeländer an?",
     answer:
-      "Ja, wir fertigen alle Arten von Geländern: Balkongeländer, Treppengeländer (innen und außen), Terrassengeländer, Galeriegeländer und Handläufe. Jedes Geländer wird individuell nach Maß in unserer Werkstatt in Bückeburg gefertigt und fachgerecht vor Ort montiert.",
+      "Ja. Wir fertigen Balkon-, Terrassen- und Treppengeländer für Innen- und Außenbereiche – jeweils individuell nach Maß und den geltenden Vorschriften.",
   },
   {
     question: "Brauche ich einen Handlauf für meine Außentreppe?",
     answer:
-      "Laut Bauordnung ist ein Handlauf ab drei Stufen Pflicht. Wir fertigen Handläufe aus Edelstahl für Hauseingänge, Gartenzugänge und Außentreppen – passgenau und witterungsbeständig. Auch Nachrüstungen an bestehenden Treppen sind problemlos möglich.",
+      "In vielen Fällen ja. Ab bestimmten Höhen und Stufenanzahlen sind Handläufe vorgeschrieben. Wir prüfen die Situation vor Ort und beraten Sie normgerecht.",
   },
   {
-    question: "In welcher Region sind Sie als Metallbauer tätig?",
+    question: "In welcher Region sind Sie tätig?",
     answer:
-      "Unser Betrieb befindet sich in Bückeburg (Schaumburg). Wir liefern und montieren im Umkreis von ca. 60 km – unter anderem in Minden, Stadthagen, Rinteln, Hannover, Hameln, Bad Salzuflen, Herford, Bielefeld und der gesamten Region Schaumburg und Minden-Lübbecke.",
+      "Unser Betrieb sitzt in Bückeburg. Wir arbeiten im Umkreis von ca. 60 km, unter anderem in Minden, Stadthagen, Rinteln und im gesamten Landkreis Schaumburg, auf Wunsch auch weiter.",
   },
   {
     question: "Welche Materialien verwenden Sie für Geländer?",
     answer:
-      "Wir verarbeiten Edelstahl (V2A und V4A), Stahl mit Feuerverzinkung, pulverbeschichteten Stahl sowie Aluminium. Glasfüllungen aus Sicherheitsglas (VSG/ESG) setzen wir für moderne, transparente Geländer ein. Als DIN EN 1090-2 EXC2 zertifizierter Betrieb garantieren wir höchste Qualitätsstandards.",
+      "Wir verarbeiten Stahl (z.\u00a0B. S235JR), Edelstahl (1.4301 / 1.4571) sowie Glasfüllungen und Trespa Platten (HPL). Die Materialwahl erfolgt immer passend zum Einsatzbereich.",
   },
   {
     question: "Wie lange dauert die Fertigung eines Geländers?",
     answer:
-      "Von der Beratung bis zur Montage vergehen in der Regel 3–6 Wochen, je nach Komplexität und Auslastung. Nach dem kostenlosen Aufmaß vor Ort erhalten Sie ein detailliertes Angebot. Nach Auftragserteilung beginnen wir zeitnah mit der Fertigung in unserer Werkstatt.",
+      "Je nach Umfang und Ausführung beträgt die Fertigungszeit in der Regel mehrere Wochen. Nach Planung und Freigabe erhalten Sie einen verbindlichen Zeitrahmen.",
   },
   {
     question: "Bieten Sie auch Reparaturen an bestehenden Geländern an?",
     answer:
-      "Ja, wir reparieren und modernisieren bestehende Geländer, Handläufe und Treppengeländer. Ob lockere Befestigungen, Rostschäden oder ein komplett neues Design – wir finden die passende Lösung. Kontaktieren Sie uns für eine unverbindliche Begutachtung.",
+      "Ja. Wir prüfen bestehende Geländer auf Sicherheit und Zustand und führen Reparaturen oder Anpassungen fachgerecht aus.",
   },
 ];
 

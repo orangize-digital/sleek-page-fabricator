@@ -5,37 +5,37 @@ const gelaenderTypes = [
     title: "Edelstahlgeländer",
     description:
       "Rostfreie Geländer aus hochwertigem Edelstahl – langlebig, pflegeleicht und zeitlos modern. Ideal für Balkone, Terrassen und Treppen.",
-    image: "/gelaender/gelaender-va-vorderansicht.jpg",
+    image: "/gelaender/edelstahlgelaender-vorderansicht.jpg",
   },
   {
     title: "Glasgeländer",
     description:
       "Moderne Geländer mit Sicherheitsglas und Edelstahlrahmen – für maximale Transparenz und lichtdurchflutete Räume.",
-    image: "/gelaender/gelaender-edelstahl-glas.jpg",
+    image: "/gelaender/glas-edelstahl-gelaender-konstruktion.jpg",
   },
   {
     title: "Balkongeländer",
     description:
       "Maßgefertigte Balkongeländer in verschiedenen Materialien und Designs – passend zu Ihrer Architektur in Bückeburg und Umgebung.",
-    image: "/gelaender/gelaender-pulverbeschichtet.jpg",
+    image: "/gelaender/pulverbeschichtetes-balkongelaender-stahl.jpg",
   },
   {
     title: "Feuerverzinkte Geländer",
     description:
       "Robuste Stahlgeländer mit Feuerverzinkung für maximalen Korrosionsschutz – besonders langlebig im Außenbereich.",
-    image: "/gelaender/stahl-feuerverzinkt-1.jpg",
+    image: "/gelaender/feuerverzinktes-stahlgelaender-aussen.jpg",
   },
   {
     title: "Handläufe",
     description:
       "Stabile Handläufe aus Edelstahl für Eingänge, Treppen und Gartenzugänge – sicherer Halt bei jedem Wetter.",
-    image: "/gelaender/handlauf-eingang.jpg",
+    image: "/gelaender/handlauf-edelstahl-hauseingang.jpg",
   },
   {
     title: "Terrassengeländer",
     description:
       "Schlichte und moderne Terrassengeländer mit klarer Formensprache – funktional und ästhetisch für den Außenbereich.",
-    image: "/gelaender/terassengelaender.png",
+    image: "/gelaender/terrassengelaender-metallbau.png",
   },
 ];
 

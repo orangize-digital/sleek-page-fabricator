@@ -5,13 +5,13 @@ const GelaenderHero = () => {
   return (
     <section
       id="gelaender-hero"
-      className="relative min-h-screen flex items-center pt-16"
+      className="relative min-h-screen flex items-center pt-24 pb-10 lg:pt-16 lg:pb-0"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-steel-dark/70 z-10"></div>
         <img
-          src="/gelaender/edelstahlglasgelaender.jpg"
+          src="/gelaender/edelstahl-glasgelaender-mit-sichtschutz-balkon.jpg"
           alt="Maßgefertigtes Edelstahlgeländer mit Glasfüllung von Metallbaumeister Albrecht in Bückeburg"
           className="w-full h-full object-cover object-center"
         />
@@ -33,8 +33,11 @@ const GelaenderHero = () => {
             </h1>
 
             <p className="text-white/95 text-lg md:text-xl mb-8 max-w-2xl font-medium drop-shadow">
-              Individuelle Geländer aus Edelstahl, Glas und Stahl – gefertigt in
-              Meisterqualität. Wir liefern und montieren in Bückeburg, Minden,
+              Individuelle Geländer aus Edelstahl, Stahl und Glas – geplant,
+              gefertigt und montiert vom Metallbaumeister.</p>
+              <p className="text-white/95 text-lg md:text-xl mb-8 max-w-2xl font-medium drop-shadow">Ob Balkon-, Treppen-
+              oder Außengeländer: Wir fertigen passgenaue Lösungen in
+              Meisterqualität und montieren fachgerecht in Bückeburg, Minden,
               Stadthagen, Rinteln und der gesamten Region Schaumburg.
             </p>
 

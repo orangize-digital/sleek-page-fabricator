@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import GelaenderHero from "@/components/sections/GelaenderHero";
+import GelaenderIntro from "@/components/sections/GelaenderIntro";
 import GelaenderFAQ from "@/components/sections/GelaenderFAQ";
 import GelaenderGallery from "@/components/sections/GelaenderGallery";
 import Process from "@/components/sections/Process";
@@ -51,7 +52,7 @@ const jsonLd = [
       },
     ],
     priceRange: "$$",
-    image: "/gelaender/edelstahlglasgelaender.jpg",
+    image: "/gelaender/edelstahl-glasgelaender-mit-sichtschutz-balkon.jpg",
   },
   {
     "@context": "https://schema.org",
@@ -105,7 +106,7 @@ const jsonLd = [
         name: "Was kostet ein Geländer aus Edelstahl?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Die Kosten für ein Edelstahlgeländer hängen von Länge, Design und Befestigungsart ab. Ein einfacher Edelstahl-Handlauf beginnt bei ca. 150 €/lfm, Geländer mit Glasfüllung ab ca. 350 €/lfm. Wir erstellen Ihnen gerne ein individuelles Angebot – die Beratung und das Aufmaß vor Ort sind kostenlos.",
+          text: "Die Kosten für ein Edelstahlgeländer hängen von Länge, Ausführung, Oberfläche und Montageaufwand ab. Nach einem Aufmaß vor Ort erstellen wir ein individuelles, transparentes Angebot. Pauschalpreise sind bei Maßanfertigungen nicht seriös.",
         },
       },
       {
@@ -113,15 +114,15 @@ const jsonLd = [
         name: "Welche Geländer eignen sich für den Außenbereich?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Für Außentreppen und Balkone empfehlen wir feuerverzinkte Stahlgeländer oder Edelstahlgeländer (V2A/V4A). Beide Varianten sind witterungsbeständig und langlebig. Feuerverzinkte Geländer bieten den besten Korrosionsschutz, Edelstahl überzeugt durch eine moderne Optik.",
+          text: "Für den Außenbereich eignen sich besonders feuerverzinkte Stahlgeländer sowie Edelstahlgeländer. Beide Varianten sind witterungsbeständig und langlebig. Die Auswahl richtet sich nach Einsatzort, Optik und Budget.",
         },
       },
       {
         "@type": "Question",
-        name: "Fertigen Sie auch Balkongeländer und Treppengeländer an?",
+        name: "Fertigen Sie auch Balkon- und Treppengeländer an?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja, wir fertigen alle Arten von Geländern: Balkongeländer, Treppengeländer (innen und außen), Terrassengeländer, Galeriegeländer und Handläufe. Jedes Geländer wird individuell nach Maß in unserer Werkstatt in Bückeburg gefertigt und fachgerecht vor Ort montiert.",
+          text: "Ja. Wir fertigen Balkon-, Terrassen- und Treppengeländer für Innen- und Außenbereiche – jeweils individuell nach Maß und den geltenden Vorschriften.",
         },
       },
       {
@@ -129,15 +130,15 @@ const jsonLd = [
         name: "Brauche ich einen Handlauf für meine Außentreppe?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Laut Bauordnung ist ein Handlauf ab drei Stufen Pflicht. Wir fertigen Handläufe aus Edelstahl für Hauseingänge, Gartenzugänge und Außentreppen – passgenau und witterungsbeständig.",
+          text: "In vielen Fällen ja. Ab bestimmten Höhen und Stufenanzahlen sind Handläufe vorgeschrieben. Wir prüfen die Situation vor Ort und beraten Sie normgerecht.",
         },
       },
       {
         "@type": "Question",
-        name: "In welcher Region sind Sie als Metallbauer tätig?",
+        name: "In welcher Region sind Sie tätig?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Unser Betrieb befindet sich in Bückeburg (Schaumburg). Wir liefern und montieren im Umkreis von ca. 60 km – unter anderem in Minden, Stadthagen, Rinteln, Hannover, Hameln, Bad Salzuflen, Herford, Bielefeld und der gesamten Region Schaumburg und Minden-Lübbecke.",
+          text: "Unser Betrieb sitzt in Bückeburg. Wir arbeiten im Umkreis von ca. 60 km, unter anderem in Minden, Stadthagen, Rinteln und im gesamten Landkreis Schaumburg, auf Wunsch auch weiter.",
         },
       },
       {
@@ -145,7 +146,7 @@ const jsonLd = [
         name: "Welche Materialien verwenden Sie für Geländer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Wir verarbeiten Edelstahl (V2A und V4A), Stahl mit Feuerverzinkung, pulverbeschichteten Stahl sowie Aluminium. Glasfüllungen aus Sicherheitsglas (VSG/ESG) setzen wir für moderne, transparente Geländer ein. Als DIN EN 1090-2 EXC2 zertifizierter Betrieb garantieren wir höchste Qualitätsstandards.",
+          text: "Wir verarbeiten Stahl (z.\u00a0B. S235JR), Edelstahl (1.4301 / 1.4571) sowie Glasfüllungen und Trespa Platten (HPL). Die Materialwahl erfolgt immer passend zum Einsatzbereich.",
         },
       },
       {
@@ -153,7 +154,7 @@ const jsonLd = [
         name: "Wie lange dauert die Fertigung eines Geländers?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Von der Beratung bis zur Montage vergehen in der Regel 3–6 Wochen, je nach Komplexität und Auslastung. Nach dem kostenlosen Aufmaß vor Ort erhalten Sie ein detailliertes Angebot.",
+          text: "Je nach Umfang und Ausführung beträgt die Fertigungszeit in der Regel mehrere Wochen. Nach Planung und Freigabe erhalten Sie einen verbindlichen Zeitrahmen.",
         },
       },
       {
@@ -161,7 +162,7 @@ const jsonLd = [
         name: "Bieten Sie auch Reparaturen an bestehenden Geländern an?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ja, wir reparieren und modernisieren bestehende Geländer, Handläufe und Treppengeländer. Ob lockere Befestigungen, Rostschäden oder ein komplett neues Design – wir finden die passende Lösung.",
+          text: "Ja. Wir prüfen bestehende Geländer auf Sicherheit und Zustand und führen Reparaturen oder Anpassungen fachgerecht aus.",
         },
       },
     ],
@@ -194,13 +195,14 @@ const Gelaender = () => {
         title="Geländer nach Maß in Bückeburg | Metallbaumeister Albrecht"
         description="Maßgefertigte Geländer aus Edelstahl, Glas & Stahl in Bückeburg und Umgebung (60 km). DIN EN 1090-2 zertifiziert. Kostenlose Beratung ✓ Montage inklusive ✓"
         canonical="/gelaender"
-        ogImage="/gelaender/edelstahlglasgelaender.jpg"
+        ogImage="/gelaender/edelstahl-glasgelaender-mit-sichtschutz-balkon.jpg"
         jsonLd={jsonLd}
       />
       <Header />
       <main>
         <ContactButtons />
         <GelaenderHero />
+        <GelaenderIntro />
         <GelaenderGallery />
         <GelaenderFAQ />
         <Process />
